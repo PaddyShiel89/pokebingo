@@ -38,9 +38,14 @@ interface GridCellProps {
 
   /** The image for the Pokémon. */
   sprite: string;
+
+  /** Whether to use dark icons. */
+  useDarkIcons: boolean;
 }
 
 const GridCell: React.FC<GridCellProps> = (props) => {
+  const useDarkIcons = props.useDarkIcons || ["white"].includes(props.color);
+
   const componentClass = "grid-cell";
   const componentWithNotesClass = componentClass + "--with-notes";
   const componentClasslist = cx(componentClass, {
@@ -51,8 +56,6 @@ const GridCell: React.FC<GridCellProps> = (props) => {
   const imageWrapperClass = componentClass + "__image-wrapper";
   const iconsListClass = componentClass + "__icons-list";
   const notesClass = componentClass + "__notes";
-
-  const useDarkIcons = ["white"].includes(props.color);
 
   const flatIconClass = componentClass + "__icon";
   const flatIconDarkClass = flatIconClass + "--dark";
