@@ -8,10 +8,11 @@ const meta = {
   args: {
     color: "brown",
     iconAlpha: false,
-    iconShiny: true,
+    iconEgg: false,
+    iconShiny: false,
     name: "Marowak",
     sprite:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
   },
   parameters: {
     layout: "centered",
@@ -23,12 +24,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
-export const NonShiny: Story = {
-  name: "Non-shiny",
+export const Shiny: Story = {
   args: {
-    iconShiny: false,
+    iconShiny: true,
     sprite:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
   },
 };
 
@@ -38,12 +38,47 @@ export const Alpha: Story = {
   },
 };
 
-export const AlphaNonShiny: Story = {
-  name: "Non-shiny alpha",
+export const Egg: Story = {
+  args: {
+    iconEgg: true,
+  },
+};
+
+export const ShinyAlpha: Story = {
+  name: "Shiny alpha",
   args: {
     iconAlpha: true,
-    iconShiny: false,
+    iconShiny: true,
     sprite:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
+  },
+};
+
+export const ShinyEgg: Story = {
+  name: "Shiny egg",
+  args: {
+    iconEgg: true,
+    iconShiny: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
+  },
+};
+
+export const AlphaEgg: Story = {
+  name: "Alpha egg",
+  args: {
+    iconAlpha: true,
+    iconEgg: true,
+  },
+};
+
+export const ShinyAlphaEgg: Story = {
+  name: "Shiny alpha egg",
+  args: {
+    iconAlpha: true,
+    iconEgg: true,
+    iconShiny: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
   },
 };

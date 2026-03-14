@@ -7,8 +7,11 @@ interface GridCellProps {
    * Pokédex is usually the color most apparent or covering each Pokémon's body. */
   color: string;
 
-  /** Whether the icon denoting the Pokémon as shiny should be displayed. */
+  /** Whether the icon denoting the Pokémon as alpha should be displayed. */
   iconAlpha: boolean;
+
+  /** Whether the icon denoting the Pokémon as an egg should be displayed. */
+  iconEgg: boolean;
 
   /** Whether the icon denoting the Pokémon as shiny should be displayed. */
   iconShiny: boolean;
@@ -39,6 +42,11 @@ const GridCell: React.FC<GridCellProps> = (props) => {
         {props.iconAlpha && (
           <li>
             <Image alt="Alpha" height={58} src="/icons/alpha.png" width={61} />
+          </li>
+        )}
+        {props.iconEgg && (
+          <li>
+            <Image alt="Egg" height={102} src="/icons/egg.png" width={102} />
           </li>
         )}
       </ul>
