@@ -11,6 +11,23 @@ const meta = {
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
   },
+  argTypes: {
+    color: {
+      control: { type: "select" },
+      options: [
+        "red",
+        "blue",
+        "yellow",
+        "green",
+        "black",
+        "brown",
+        "purple",
+        "gray",
+        "white",
+        "pink",
+      ],
+    },
+  },
   parameters: {
     layout: "centered",
   },

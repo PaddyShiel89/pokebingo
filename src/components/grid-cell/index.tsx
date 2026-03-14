@@ -34,8 +34,12 @@ const GridCell: React.FC<GridCellProps> = (props) => {
   const imageWrapperClass = componentClass + "__image-wrapper";
   const iconsListClass = componentClass + "__icons-list";
 
+  const styles: React.CSSProperties = {
+    backgroundColor: `var(--pokemon-${props.color})`,
+  };
+
   return (
-    <div className={componentClass} style={{ backgroundColor: props.color }}>
+    <div className={componentClass} style={styles}>
       <div className={imageWrapperClass}>
         <Image
           alt={props.name}
