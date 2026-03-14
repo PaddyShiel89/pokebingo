@@ -13,13 +13,13 @@ interface GridCellProps {
   game?: string;
 
   /** Whether the icon denoting the Pokémon as alpha should be displayed. */
-  iconAlpha: boolean;
+  iconAlpha?: boolean;
 
   /** Whether the icon denoting the Pokémon as an egg should be displayed. */
-  iconEgg: boolean;
+  iconEgg?: boolean;
 
   /** Whether the icon denoting the Pokémon as shiny should be displayed. */
-  iconShiny: boolean;
+  iconShiny?: boolean;
 
   /** The name of the Pokémon. */
   name: string;
