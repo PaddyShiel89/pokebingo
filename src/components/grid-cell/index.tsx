@@ -7,6 +7,11 @@ interface GridCellProps {
    * Pokédex is usually the color most apparent or covering each Pokémon's body. */
   color: string;
 
+  /** The game or generation the Pokémon is being hunted in. There is no
+   * validation for this, but it should be short text, e.g. HGSS instead of
+   * HeartGold/Soul Silver. */
+  game?: string;
+
   /** Whether the icon denoting the Pokémon as alpha should be displayed. */
   iconAlpha: boolean;
 
@@ -25,6 +30,7 @@ interface GridCellProps {
 
 const GridCell: React.FC<GridCellProps> = (props) => {
   const componentClass = "grid-cell";
+  const gameClass = componentClass + "__game";
   const imageWrapperClass = componentClass + "__image-wrapper";
   const iconsListClass = componentClass + "__icons-list";
 
@@ -39,6 +45,7 @@ const GridCell: React.FC<GridCellProps> = (props) => {
           src={props.sprite}
         />
       </div>
+      {props.game && <span className={gameClass}>{props.game}</span>}
       <ul className={iconsListClass}>
         {props.iconShiny && (
           <li>

@@ -82,3 +82,17 @@ export const ShinyAlphaEgg: Story = {
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
   },
 };
+
+export const WithGame: Story = {
+  name: "With game",
+  args: {
+    game: "HG",
+  },
+};
+
+export const WithGen: Story = {
+  name: "With generation",
+  args: {
+    game: "Gen IV",
+  },
+};
