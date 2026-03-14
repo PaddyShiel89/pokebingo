@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMars } from "@fortawesome/free-solid-svg-icons/faMars";
+import { faVenus } from "@fortawesome/free-solid-svg-icons/faVenus";
 import cx from "classnames";
 import Image from "next/image";
 import "./grid-cell.scss";
@@ -18,6 +21,10 @@ interface GridCellProps {
 
   /** Whether the icon denoting the Pokémon as an egg should be displayed. */
   iconEgg?: boolean;
+
+  /** The icon denoting the Pokémon's gender. If `undefined`, it won't be
+   * displayed. */
+  iconGender?: "male" | "female";
 
   /** Whether the icon denoting the Pokémon as shiny should be displayed. */
   iconShiny?: boolean;
@@ -44,10 +51,12 @@ const GridCell: React.FC<GridCellProps> = (props) => {
   const iconsListClass = componentClass + "__icons-list";
   const notesClass = componentClass + "__notes";
 
+  const useDarkIcons = ["white"].includes(props.color);
+
   const flatIconClass = componentClass + "__icon";
   const flatIconDarkClass = flatIconClass + "--dark";
   const flatIconClasslist = cx(flatIconClass, {
-    [flatIconDarkClass]: ["white"].includes(props.color),
+    [flatIconDarkClass]: useDarkIcons,
   });
 
   const styles: React.CSSProperties = {
@@ -66,7 +75,10 @@ const GridCell: React.FC<GridCellProps> = (props) => {
         />
       </div>
       {props.game && <span className={gameClass}>{props.game}</span>}
-      {(props.iconShiny || props.iconAlpha || props.iconEgg) && (
+      {(props.iconShiny ||
+        props.iconGender ||
+        props.iconAlpha ||
+        props.iconEgg) && (
         <ul className={iconsListClass}>
           {props.iconShiny && (
             <li>
@@ -76,6 +88,15 @@ const GridCell: React.FC<GridCellProps> = (props) => {
                 height={44}
                 src="/icons/shiny.png"
                 width={40}
+              />
+            </li>
+          )}
+          {props.iconGender && (
+            <li>
+              <FontAwesomeIcon
+                color={useDarkIcons ? "black" : "white"}
+                icon={props.iconGender === "female" ? faVenus : faMars}
+                fontSize={30}
               />
             </li>
           )}

@@ -52,9 +52,31 @@ export const Alpha: Story = {
   },
 };
 
+export const GenderedFemale: Story = {
+  args: {
+    iconGender: "female",
+  },
+};
+
+export const GenderedMale: Story = {
+  args: {
+    iconGender: "male",
+  },
+};
+
 export const Egg: Story = {
   args: {
     iconEgg: true,
+  },
+};
+
+export const ShinyGendered: Story = {
+  name: "Shiny gendered",
+  args: {
+    iconGender: "female",
+    iconShiny: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
   },
 };
 
@@ -78,6 +100,26 @@ export const ShinyEgg: Story = {
   },
 };
 
+export const GenderedAlpha: Story = {
+  name: "Gendered alpha",
+  args: {
+    iconGender: "female",
+    iconAlpha: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
+  },
+};
+
+export const GenderedEgg: Story = {
+  name: "Gendered egg",
+  args: {
+    iconGender: "female",
+    iconEgg: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
+  },
+};
+
 export const AlphaEgg: Story = {
   name: "Alpha egg",
   args: {
@@ -86,11 +128,56 @@ export const AlphaEgg: Story = {
   },
 };
 
+export const ShinyGenderedAlpha: Story = {
+  name: "Shiny gendered alpha",
+  args: {
+    iconAlpha: true,
+    iconGender: "female",
+    iconShiny: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
+  },
+};
+
+export const ShinyGenderedEgg: Story = {
+  name: "Shiny gendered egg",
+  args: {
+    iconEgg: true,
+    iconGender: "female",
+    iconShiny: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
+  },
+};
+
 export const ShinyAlphaEgg: Story = {
   name: "Shiny alpha egg",
   args: {
     iconAlpha: true,
     iconEgg: true,
+    iconShiny: true,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
+  },
+};
+
+export const GenderedAlphaEgg: Story = {
+  name: "Gendered alpha egg",
+  args: {
+    iconAlpha: true,
+    iconEgg: true,
+    iconGender: "female",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
+  },
+};
+
+export const ShinyGenderedAlphaEgg: Story = {
+  name: "Shiny gendered alpha egg",
+  args: {
+    iconAlpha: true,
+    iconEgg: true,
+    iconGender: "female",
     iconShiny: true,
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/shiny/105.png",
@@ -110,6 +197,7 @@ export const WithNotes: Story = {
     iconAlpha: true,
     iconEgg: true,
     iconShiny: true,
+    iconGender: "female",
     notes: "Mass outbreak",
   },
 };
@@ -120,6 +208,7 @@ export const WithOverflowNotes: Story = {
     iconAlpha: true,
     iconEgg: true,
     iconShiny: true,
+    iconGender: "female",
     notes: "I'm gonna catch them in a mass outbreak",
   },
 };
