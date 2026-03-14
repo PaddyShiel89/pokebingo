@@ -1,5 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEgg } from "@fortawesome/free-solid-svg-icons/faEgg";
 import { faMars } from "@fortawesome/free-solid-svg-icons/faMars";
 import { faVenus } from "@fortawesome/free-solid-svg-icons/faVenus";
 import cx from "classnames";
@@ -96,7 +97,7 @@ const GridCell: React.FC<GridCellProps> = (props) => {
               <FontAwesomeIcon
                 color={useDarkIcons ? "black" : "white"}
                 icon={props.iconGender === "female" ? faVenus : faMars}
-                fontSize={30}
+                fontSize={27}
               />
             </li>
           )}
@@ -113,12 +114,10 @@ const GridCell: React.FC<GridCellProps> = (props) => {
           )}
           {props.iconEgg && (
             <li>
-              <Image
-                alt="Egg"
-                className={flatIconClasslist}
-                height={102}
-                src="/icons/egg.png"
-                width={102}
+              <FontAwesomeIcon
+                color={useDarkIcons ? "black" : "white"}
+                icon={faEgg}
+                fontSize={27}
               />
             </li>
           )}

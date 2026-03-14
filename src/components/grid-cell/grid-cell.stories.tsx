@@ -209,7 +209,7 @@ export const WithOverflowNotes: Story = {
     iconEgg: true,
     iconShiny: true,
     iconGender: "female",
-    notes: "I'm gonna catch them in a mass outbreak",
+    notes: "I'm going to catch a shiny alpha Marowak in a mass outbreak",
   },
 };
 
