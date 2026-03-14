@@ -110,3 +110,93 @@ export const WithGen: Story = {
     game: "Gen IV",
   },
 };
+
+export const Red: Story = {
+  args: {
+    color: "red",
+    name: "Charmander",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/4.png",
+  },
+};
+
+export const Blue: Story = {
+  args: {
+    color: "blue",
+    name: "Squirtle",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/7.png",
+  },
+};
+
+export const Yellow: Story = {
+  args: {
+    color: "yellow",
+    name: "Pikachu",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/25.png",
+  },
+};
+
+export const Green: Story = {
+  args: {
+    color: "green",
+    name: "Bulbasaur",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/1.png",
+  },
+};
+
+export const Black: Story = {
+  args: {
+    color: "black",
+    name: "Umbreon",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/197.png",
+  },
+};
+
+export const Brown: Story = {
+  args: {
+    color: "brown",
+    name: "Vulpix",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/37.png",
+  },
+};
+
+export const Purple: Story = {
+  args: {
+    color: "purple",
+    name: "Arbok",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/24.png",
+  },
+};
+
+export const Gray: Story = {
+  args: {
+    color: "gray",
+    name: "Aggron",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/306.png",
+  },
+};
+
+export const White: Story = {
+  args: {
+    color: "white",
+    name: "Gardevoir",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/282.png",
+  },
+};
+
+export const Pink: Story = {
+  args: {
+    color: "pink",
+    name: "Sylveon",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vi/x-y/700.png",
+  },
+};
