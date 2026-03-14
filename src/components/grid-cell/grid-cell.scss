@@ -18,6 +18,10 @@
     [icons-end] auto [cell-end];
   grid-template-rows: [cell-top sprite-top] 1fr [sprite-bottom cell-bottom];
 
+  &--light-text {
+    color: var(--text-light);
+  }
+
   &--with-notes {
     grid-template-rows:
       [cell-top sprite-top] 1fr [sprite-bottom notes-top] var(

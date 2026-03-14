@@ -1,6 +1,8 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+
+  --text-dark: #171717;
+  --text-light: #fafafa;
 
   --pokemon-red: #f54c4c;
   --pokemon-blue: #8098fd;
@@ -28,7 +30,7 @@ body {
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-dark);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;

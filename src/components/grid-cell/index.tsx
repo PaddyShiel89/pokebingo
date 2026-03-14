@@ -43,16 +43,22 @@ interface GridCellProps {
   spriteSilhouette?: boolean;
 
   /** Whether to use dark icons. */
-  useDarkIcons: boolean;
+  useDarkIcons?: boolean;
+
+  /** Whether to use light text. */
+  useLightText?: boolean;
 }
 
 const GridCell: React.FC<GridCellProps> = (props) => {
   const useDarkIcons = props.useDarkIcons || ["white"].includes(props.color);
+  const useLightText = props.useLightText || ["black"].includes(props.color);
 
   const componentClass = "grid-cell";
   const componentWithNotesClass = componentClass + "--with-notes";
+  const componentLightText = componentClass + "--light-text";
   const componentClasslist = cx(componentClass, {
     [componentWithNotesClass]: !!props.notes,
+    [componentLightText]: useLightText,
   });
 
   const gameClass = componentClass + "__game";

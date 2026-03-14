@@ -10,7 +10,6 @@ const meta = {
     name: "Marowak",
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
-    useDarkIcons: false,
   },
   argTypes: {
     color: {
@@ -363,5 +362,21 @@ export const WithDarkIcons: Story = {
     name: "Pikachu",
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/25.png",
+  },
+};
+
+export const WithLightText: Story = {
+  name: "With light text",
+  args: {
+    color: "black",
+    iconAlpha: true,
+    iconEgg: true,
+    iconShiny: true,
+    iconGender: "female",
+    name: "Umbreon",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/197.png",
+    notes: "Mass outbreak",
+    useLightText: true,
   },
 };
