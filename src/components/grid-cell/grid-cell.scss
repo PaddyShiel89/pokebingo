@@ -42,8 +42,8 @@
     }
 
     img {
-      height: var(--grid-cell-icon-size);
-      width: var(--grid-cell-icon-size);
+      max-height: var(--grid-cell-icon-size);
+      max-width: var(--grid-cell-icon-size);
     }
   }
 

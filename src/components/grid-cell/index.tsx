@@ -8,6 +8,9 @@ interface GridCellProps {
   color: string;
 
   /** Whether the icon denoting the Pokémon as shiny should be displayed. */
+  iconAlpha: boolean;
+
+  /** Whether the icon denoting the Pokémon as shiny should be displayed. */
   iconShiny: boolean;
 
   /** The name of the Pokémon. */
@@ -31,6 +34,11 @@ const GridCell: React.FC<GridCellProps> = (props) => {
         {props.iconShiny && (
           <li>
             <Image alt="Shiny" height={44} src="/icons/shiny.png" width={40} />
+          </li>
+        )}
+        {props.iconAlpha && (
+          <li>
+            <Image alt="Alpha" height={58} src="/icons/alpha.png" width={61} />
           </li>
         )}
       </ul>

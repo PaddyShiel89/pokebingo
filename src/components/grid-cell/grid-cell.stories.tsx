@@ -7,6 +7,7 @@ const meta = {
   tags: ["autodocs"],
   args: {
     color: "brown",
+    iconAlpha: false,
     iconShiny: true,
     name: "Marowak",
     sprite:
@@ -25,6 +26,22 @@ export const Default: Story = {};
 export const NonShiny: Story = {
   name: "Non-shiny",
   args: {
+    iconShiny: false,
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
+  },
+};
+
+export const Alpha: Story = {
+  args: {
+    iconAlpha: true,
+  },
+};
+
+export const AlphaNonShiny: Story = {
+  name: "Non-shiny alpha",
+  args: {
+    iconAlpha: true,
     iconShiny: false,
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
