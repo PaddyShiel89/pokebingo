@@ -1,0 +1,8 @@
+.grid-cell {
+  --grid-cell-width: 220px;
+  --grid-cell-border-radius: 5px;
+
+  width: var(--grid-cell-width);
+  height: var(--grid-cell-width);
+  border-radius: var(--grid-cell-border-radius);
+}

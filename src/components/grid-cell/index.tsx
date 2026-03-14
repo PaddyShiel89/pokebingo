@@ -1,4 +1,5 @@
 import React from "react";
+import "./grid-cell.scss";
 
 interface GridCellProps {
   /** The name of the Pokémon. */
@@ -6,7 +7,9 @@ interface GridCellProps {
 }
 
 const GridCell: React.FC<GridCellProps> = (props) => {
-  return <div>{props.name}</div>;
+  const componentClass = "grid-cell";
+
+  return <div className={componentClass}>{props.name}</div>;
 };
 
 export default GridCell;
