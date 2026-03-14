@@ -31,7 +31,13 @@ const GridCell: React.FC<GridCellProps> = (props) => {
   return (
     <div className={componentClass} style={{ backgroundColor: props.color }}>
       <div className={imageWrapperClass}>
-        <Image alt={props.name} fill={true} quality={100} src={props.sprite} />
+        <Image
+          alt={props.name}
+          fill
+          quality={100}
+          sizes="160px"
+          src={props.sprite}
+        />
       </div>
       <ul className={iconsListClass}>
         {props.iconShiny && (
