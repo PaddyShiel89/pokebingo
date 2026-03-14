@@ -47,6 +47,13 @@ export const Shiny: Story = {
   },
 };
 
+export const Silhouette: Story = {
+  name: "Sprite silhouette",
+  args: {
+    spriteSilhouette: true,
+  },
+};
+
 export const Alpha: Story = {
   args: {
     iconAlpha: true,

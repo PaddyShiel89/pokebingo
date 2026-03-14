@@ -97,4 +97,11 @@
       width: 100%;
     }
   }
+
+  &__sprite {
+    &--silhouette {
+      filter: brightness(0);
+      opacity: 0.75;
+    }
+  }
 }
