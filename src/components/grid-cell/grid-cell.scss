@@ -16,11 +16,15 @@
   grid-template-columns:
     [cell-start icons-start] var(--grid-cell-icon-list-size)
     [icons-end] auto [cell-end];
-  grid-template-rows:
-    [cell-top sprite-top] 1fr [sprite-bottom notes-top] var(
-      --grid-cell-additional-notes-height
-    )
-    [notes-bottom cell-bottom];
+  grid-template-rows: [cell-top sprite-top] 1fr [sprite-bottom cell-bottom];
+
+  &--with-notes {
+    grid-template-rows:
+      [cell-top sprite-top] 1fr [sprite-bottom notes-top] var(
+        --grid-cell-additional-notes-height
+      )
+      [notes-bottom cell-bottom];
+  }
 
   // ! DELETE AFTER DEV
   border: 1px solid darkblue;
@@ -61,6 +65,7 @@
     grid-row: sprite-top/sprite-bottom;
     position: relative;
     justify-self: center;
+    align-self: center;
     height: var(--grid-cell-sprite-size);
     width: var(--grid-cell-sprite-size);
   }
