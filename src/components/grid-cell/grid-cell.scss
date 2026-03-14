@@ -1,7 +1,10 @@
 .grid-cell {
   --grid-cell-size: 220px;
   --grid-cell-border-radius: 5px;
-  --grid-cell-sprite-size: 150px;
+  --grid-cell-icon-list-size: 40px;
+  --grid-cell-icon-size: 30px;
+  --grid-cell-sprite-size: 160px;
+  --grid-cell-additional-notes-height: 40px;
 
   width: var(--grid-cell-size);
   height: var(--grid-cell-size);
@@ -9,13 +12,46 @@
   border-radius: var(--grid-cell-border-radius);
 
   display: grid;
-  grid-template-rows: [cell-top sprite-top] 150px [sprite-bottom title-top] auto [title-bottom cell-bottom];
-  justify-content: center;
-  text-align: center;
+  grid-template-columns:
+    [cell-start icons-start] var(--grid-cell-icon-list-size)
+    [icons-end] auto [cell-end];
+  grid-template-rows:
+    [cell-top sprite-top] 1fr [sprite-bottom notes-top] var(
+      --grid-cell-additional-notes-height
+    )
+    [notes-bottom cell-bottom];
+
+  // ! DELETE AFTER DEV
+  border: 1px solid darkblue;
+
+  &__icons-list {
+    grid-column: icons-start/icons-end;
+    grid-row: cell-top/cell-bottom;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: var(--grid-cell-icon-list-size);
+      width: var(--grid-cell-icon-list-size);
+    }
+
+    img {
+      height: var(--grid-cell-icon-size);
+      width: var(--grid-cell-icon-size);
+    }
+  }
 
   &__image-wrapper {
+    grid-column: cell-start/cell-end;
     grid-row: sprite-top/sprite-bottom;
     position: relative;
+    justify-self: center;
     height: var(--grid-cell-sprite-size);
     width: var(--grid-cell-sprite-size);
   }

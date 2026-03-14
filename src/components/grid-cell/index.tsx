@@ -3,6 +3,13 @@ import Image from "next/image";
 import "./grid-cell.scss";
 
 interface GridCellProps {
+  /** Colors used for sorting Pokémon in a Pokédex. The color listed in the
+   * Pokédex is usually the color most apparent or covering each Pokémon's body. */
+  color: string;
+
+  /** Whether the icon denoting the Pokémon as shiny should be displayed. */
+  iconShiny: boolean;
+
   /** The name of the Pokémon. */
   name: string;
 
@@ -13,13 +20,20 @@ interface GridCellProps {
 const GridCell: React.FC<GridCellProps> = (props) => {
   const componentClass = "grid-cell";
   const imageWrapperClass = componentClass + "__image-wrapper";
+  const iconsListClass = componentClass + "__icons-list";
 
   return (
-    <div className={componentClass}>
+    <div className={componentClass} style={{ backgroundColor: props.color }}>
       <div className={imageWrapperClass}>
-        <Image alt="" fill={true} quality={100} src={props.sprite} />
+        <Image alt={props.name} fill={true} quality={100} src={props.sprite} />
       </div>
-      <h3>{props.name}</h3>
+      <ul className={iconsListClass}>
+        {props.iconShiny && (
+          <li>
+            <Image alt="Shiny" height={44} src="/icons/shiny.png" width={40} />
+          </li>
+        )}
+      </ul>
     </div>
   );
 };
