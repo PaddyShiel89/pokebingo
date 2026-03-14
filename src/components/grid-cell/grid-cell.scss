@@ -26,14 +26,11 @@
       [notes-bottom cell-bottom];
   }
 
-  // ! DELETE AFTER DEV
-  border: 1px solid darkblue;
-
   &__game {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 5px;
+    padding: 8px 10px;
     font-weight: 700;
   }
 
@@ -53,10 +50,15 @@
       height: var(--grid-cell-icon-list-size);
       width: var(--grid-cell-icon-list-size);
     }
+  }
 
-    img {
-      max-height: var(--grid-cell-icon-size);
-      max-width: var(--grid-cell-icon-size);
+  &__icon {
+    filter: brightness(0) invert(1);
+    max-height: var(--grid-cell-icon-size);
+    max-width: var(--grid-cell-icon-size);
+
+    &--dark {
+      filter: brightness(0);
     }
   }
 

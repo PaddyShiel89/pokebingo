@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 import Image from "next/image";
 import "./grid-cell.scss";
 
@@ -33,6 +34,11 @@ const GridCell: React.FC<GridCellProps> = (props) => {
   const gameClass = componentClass + "__game";
   const imageWrapperClass = componentClass + "__image-wrapper";
   const iconsListClass = componentClass + "__icons-list";
+  const flatIconClass = componentClass + "__icon";
+  const flatIconDarkClass = flatIconClass + "--dark";
+  const flatIconClasslist = cx(flatIconClass, {
+    [flatIconDarkClass]: ["white"].includes(props.color),
+  });
 
   const styles: React.CSSProperties = {
     backgroundColor: `var(--pokemon-${props.color})`,
@@ -56,6 +62,7 @@ const GridCell: React.FC<GridCellProps> = (props) => {
             <li>
               <Image
                 alt="Shiny"
+                className={flatIconClasslist}
                 height={44}
                 src="/icons/shiny.png"
                 width={40}
@@ -66,6 +73,7 @@ const GridCell: React.FC<GridCellProps> = (props) => {
             <li>
               <Image
                 alt="Alpha"
+                className={flatIconClasslist}
                 height={58}
                 src="/icons/alpha.png"
                 width={61}
@@ -74,7 +82,13 @@ const GridCell: React.FC<GridCellProps> = (props) => {
           )}
           {props.iconEgg && (
             <li>
-              <Image alt="Egg" height={102} src="/icons/egg.png" width={102} />
+              <Image
+                alt="Egg"
+                className={flatIconClasslist}
+                height={102}
+                src="/icons/egg.png"
+                width={102}
+              />
             </li>
           )}
         </ul>
