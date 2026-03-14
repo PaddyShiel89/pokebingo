@@ -1,8 +1,22 @@
 .grid-cell {
-  --grid-cell-width: 220px;
+  --grid-cell-size: 220px;
   --grid-cell-border-radius: 5px;
+  --grid-cell-sprite-size: 150px;
 
-  width: var(--grid-cell-width);
-  height: var(--grid-cell-width);
+  width: var(--grid-cell-size);
+  height: var(--grid-cell-size);
+
   border-radius: var(--grid-cell-border-radius);
+
+  display: grid;
+  grid-template-rows: [cell-top sprite-top] 150px [sprite-bottom title-top] auto [title-bottom cell-bottom];
+  justify-content: center;
+  text-align: center;
+
+  &__image-wrapper {
+    grid-row: sprite-top/sprite-bottom;
+    position: relative;
+    height: var(--grid-cell-sprite-size);
+    width: var(--grid-cell-sprite-size);
+  }
 }
