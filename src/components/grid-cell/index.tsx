@@ -25,15 +25,25 @@ interface GridCellProps {
   /** The name of the Pokémon. */
   name: string;
 
+  /** Additional notes entered by the creator. */
+  notes?: string;
+
   /** The image for the Pokémon. */
   sprite: string;
 }
 
 const GridCell: React.FC<GridCellProps> = (props) => {
   const componentClass = "grid-cell";
+  const componentWithNotesClass = componentClass + "--with-notes";
+  const componentClasslist = cx(componentClass, {
+    [componentWithNotesClass]: !!props.notes,
+  });
+
   const gameClass = componentClass + "__game";
   const imageWrapperClass = componentClass + "__image-wrapper";
   const iconsListClass = componentClass + "__icons-list";
+  const notesClass = componentClass + "__notes";
+
   const flatIconClass = componentClass + "__icon";
   const flatIconDarkClass = flatIconClass + "--dark";
   const flatIconClasslist = cx(flatIconClass, {
@@ -45,7 +55,7 @@ const GridCell: React.FC<GridCellProps> = (props) => {
   };
 
   return (
-    <div className={componentClass} style={styles}>
+    <div className={componentClasslist} style={styles}>
       <div className={imageWrapperClass}>
         <Image
           alt={props.name}
@@ -92,6 +102,11 @@ const GridCell: React.FC<GridCellProps> = (props) => {
             </li>
           )}
         </ul>
+      )}
+      {props.notes && (
+        <div className={notesClass}>
+          <p>{props.notes}</p>
+        </div>
       )}
     </div>
   );

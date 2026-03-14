@@ -104,10 +104,23 @@ export const WithGame: Story = {
   },
 };
 
-export const WithGen: Story = {
-  name: "With generation",
+export const WithNotes: Story = {
+  name: "With notes",
   args: {
-    game: "Gen IV",
+    iconAlpha: true,
+    iconEgg: true,
+    iconShiny: true,
+    notes: "Mass outbreak",
+  },
+};
+
+export const WithOverflowNotes: Story = {
+  name: "With overflow notes",
+  args: {
+    iconAlpha: true,
+    iconEgg: true,
+    iconShiny: true,
+    notes: "I'm gonna catch them in a mass outbreak",
   },
 };
 

@@ -75,4 +75,26 @@
       object-fit: contain;
     }
   }
+
+  &__notes {
+    grid-column: cell-start/cell-end;
+    grid-row: notes-top/notes-bottom;
+    padding: 0 5px 5px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    width: var(--grid-cell-size);
+    display: flex;
+    text-align: center;
+    align-items: center;
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
 }
