@@ -7,9 +7,15 @@ const meta = {
   tags: ["autodocs"],
   args: {
     color: "brown",
+    iconAlpha: true,
+    iconEgg: true,
+    iconShiny: true,
     name: "Marowak",
     sprite:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-iv/heartgold-soulsilver/105.png",
+    spriteSilhouette: false,
+    useDarkIcons: false,
+    useLightText: false,
   },
   argTypes: {
     color: {
